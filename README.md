@@ -1,11 +1,31 @@
 # ghostframe
 
+<!-- Example contact sheet: add the image at docs/example_contact_sheet.png, then uncomment:
+![Example ghostframe contact sheet](docs/example_contact_sheet.png)
+-->
+
 Video link in, timestamped contact sheet out.
 
+## Install
+
 ```
+git clone https://github.com/Ghostsights/GhostFrame.git
+cd GhostFrame
 py -m pip install --user -e .
+```
+
+On macOS and Linux, use `python3` wherever these docs say `py`
+(e.g. `python3 -m pip install --user -e .`).
+
+## Use
+
+```
 py -m ghostframe "https://youtu.be/dQw4w9WgXcQ"
 ```
+
+Run `py -m ghostframe --help` for all options.
+
+## How it works
 
 Pipeline: yt-dlp download (≤480p, H.264 preferred, video only) → ffmpeg scene-change
 detection (topped up with evenly spaced frames when a video has few cuts) → drop blank
@@ -28,5 +48,10 @@ Installing [deno](https://deno.com) avoids YouTube throttling yt-dlp's downloads
 
 Supported now: YouTube URLs and local video files. Not yet: Instagram.
 
+## Claude Code skill
+
 `SKILL.md` is the Claude Code skill; copy it to `~/.claude/skills/ghostframe/SKILL.md`.
-Run `py -m ghostframe --help` for all options.
+
+## License
+
+[MIT](LICENSE) © Ghostsights

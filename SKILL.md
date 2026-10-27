@@ -17,7 +17,8 @@ the transcript is how you "watch" the video.
 py -m ghostframe "<youtube-url-or-video-path>" -o "<scratch-dir>/ghostframe/<short-name>"
 ```
 
-- Use `python -m ghostframe` if `py` isn't available. Always quote the URL.
+- On macOS/Linux use `python3 -m ghostframe` (and `python3` in the other commands below).
+  Always quote the URL.
 - Put output in your scratchpad directory (or wherever the user asks), not the project.
 - Downloads take ~30-60s for a few-minute video; run in the background for anything
   over ~10 minutes long.
