@@ -1,0 +1,30 @@
+# Python build/install artifacts (contain local install paths)
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# ghostframe output and downloads
+ghostframe_out/
+_download/
+_work/
+*.mp4
+*.mkv
+*.webm
+*.m4a
+
+# Never commit credentials or browser cookies (e.g. for yt-dlp --cookies)
+.env
+.env.*
+*cookies*.txt
+*.netrc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

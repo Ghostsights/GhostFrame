@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostframe"
+version = "0.1.0"
+description = "Turn a video link into a timestamped contact sheet Claude can read."
+requires-python = ">=3.10"
+dependencies = [
+    "yt-dlp>=2025.1.1",
+    "Pillow>=10.1",
+    "imageio-ffmpeg>=0.5",
+]
+
+[project.optional-dependencies]
+# Transcription fallback for videos without captions.
+whisper = ["faster-whisper>=1.1"]
+
+[project.scripts]
+ghostframe = "ghostframe.cli:main"
+
+[tool.setuptools]
+packages = ["ghostframe"]
